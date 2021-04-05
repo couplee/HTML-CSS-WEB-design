@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+/* 共通部分ここから */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Yu Gothic Medium", "遊ゴシック Medium", YuGothic, "遊ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+  color: #432;
+}
+
+a {
+  text-decoration: none;                /*リンクの下線無くす*/
+}
+
+img {
+  max-width: 100%;
+}
+
+/* 共通部分ここまで */
+
+/* ヘッダーここから */
+.logo {
+  width: 210px;
+  margin-top: 14px;
+}
+
+.main-nav {
+  display: flex;                /* liタグを横並び */
+  font-size: 1.25rem;
+  text-transform: uppercase;         /* 大文字にする */
+  margin-top: 34px;
+  list-style: none;                    /* liに直接適用させてもいい */
+}
+
+.main-nav li {
+  margin-left: 36px;
+}
+
+.main-nav a {
+  color: #432;
+}
+
+.main-nav a:hover {
+  color: #0bd;
+}
+
+.page-header {
+  display: flex;               /* ロゴとliを横並び */
+  justify-content: space-between;         /* ロゴとliを両端に設置 */
+}
+
+.wrapper {                   /* ロゴとliが離れすぎるから */
+  max-width: 1100px;              /* 横幅の最大値 */
+  margin: 0 auto;               /* 中央に配置 */
+  padding: 0 4%;               /* スマホ向け余白の指定 */
+}
+/* ヘッダーここまで */
+
+
+/* ホームここから */
+.home-content {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.home-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 42px;
+}
+
+.page-title {              /* 見出し */
+  font-size: 5rem;
+  font-family: 'Philosopher', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.button {           /* ボタン */
+  font-size: 1.375rem;
+  background-color: #0bd;
+  color: #fff;
+  border-radius: 5px;
+  padding: 18px 32px;
+}
+
+.button:hover {
+  background-color: #0090aa;
+}
+
+.big-bg {           /* big-bgは他のページでも使うからclassにして、背景画像は#homeに記述した */
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+#home {
+  background-image: url(../images/main-bg.jpg);
+  min-height: 100vh;        /* 画面の高さの指定 */
+}
+
+#home .page-title {
+  text-transform: none;
+}
+/* ホームここまで */
