@@ -128,8 +128,7 @@ img {
 }
 
 article {
-  width: 60%;    /* asideは22%で合わせて100%になってない */
-  order: 2;
+  width: 74%;    /* asideは22%で合わせて100%になってない */
 }
 
 .post-info {
@@ -180,7 +179,6 @@ article p {
 
 aside {
   width: 22%;    /* articleは74%で合わせて100%になってない */
-  order: 3;
 }
 
 .sub-title {
@@ -214,9 +212,48 @@ aside p {
 }
 /* ニュースコンテンツここまで */
 
-.ad {
-  order: 1;
+
+/* メニューコンテンツここから */
+#menu {
+  background-image: url(../images/menu-bg.jpg);
+  min-height: 100vh;
 }
+
+.menu-content {
+  max-width: 560px;
+  margin-top: 10%;
+}
+
+.menu-content .page-title {
+  text-align: center;
+}
+
+.menu-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 0;
+}
+/* メニューコンテンツここまで */
+
+/* メニューアイテムここから */
+.grid {
+  display: grid;    /* タイル型に並べるために */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));  /* 横1列に3つ並ぶ(3をauto-fitに書き換えたがそれでも1列に最大3つ並ぶ、、？)→ */  /* minmaxで要素が画面の幅に合わせて伸縮するが、240pxより小さくならない */
+  gap: 26px;       /* 要素同士に余白 */
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
+
+.big-box {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+.big-box img {
+  height: 94%;   /* 小さい画像の高さに合わせる */
+  width: 100%;
+  object-fit: cover;  /* 画像が横長で少し歪むからはみ出た部分を自動的にカット */
+}
+/* メニューアイテムここまで */
 
 /* フッターここから */
 footer {
@@ -303,6 +340,22 @@ footer p {
   aside {
     margin-top: 60px;
   }
-
   /* ニュースコンテンツここまで */
+
+  /* メニューコンテンツここから */
+  .menu-content {
+    margin-top: 20%;
+  }
+  /* メニューコンテンツここまで */
+
+  /* メニューアイテムここから */    /* grid-columnとgrid-rowを指定したせいで大きさがバラバラになるから */
+  .big-box {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .big-box img {
+    height: 100%;
+  }
+  /* メニューアイテムここまで */
 }
