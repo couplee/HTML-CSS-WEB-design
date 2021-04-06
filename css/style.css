@@ -255,6 +255,98 @@ aside p {
 }
 /* メニューアイテムここまで */
 
+
+/* コンタクトここから */
+#contact {
+  background-image: url(../images/contact-bg.jpg);
+  min-height: 100vh;
+}
+
+form div {
+  margin-bottom: 14px;
+}
+
+label {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  display: block;   /* 縦並びにする */
+}
+input[type="text"], input[type="email"], textarea {
+  background:rgba(255, 255, 255, .5);
+  border: 1px #fff solid;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+input[type="text"], input[type="email"] {
+  width: 100%;
+  max-width: 240px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 480px;
+  height: 6rem;
+}
+
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+/* コンタクトここまで */
+
+
+/* ロケーションここから */
+#location {
+  padding: 4% 0;
+}
+
+#location .wrapper {
+  display: flex;       /* 横並びにする */
+  justify-content: space-between;
+}
+
+.location-info {
+  width: 22%;
+}
+
+.location-info p {
+  padding: 12px 10px;
+}
+
+.location-map {
+  width: 74%;
+}
+
+iframe {
+  width: 100%;     /* はみ出し防止 */
+}
+/* ロケーションここまで */
+
+
+/* SNSここから */
+#sns {
+  background-color: #FAF7F0;
+  padding: 4% 0;
+}
+
+#sns .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+#sns .sub-title {
+  margin-bottom: 30px;
+}
+
+.sns-box {
+  width: 30%;
+}
+/* SNSここまで */
+
+
 /* フッターここから */
 footer {
   background: #432;
@@ -358,4 +450,28 @@ footer p {
     height: 100%;
   }
   /* メニューアイテムここまで */
+
+  /* コンタクトここから */
+  #contact .page-title {
+    margin-top: 40px;
+  }
+
+  input[type="text"], input[type="email"], textarea {
+    max-width: 100%;
+  }
+  /* コンタクトここまで */
+
+  /* ロケーションとSNSここから */
+  #location .wrapper, #sns .wrapper {
+    flex-direction: column;        /* display: flex;で横並びにしてるからここで縦並び指定 */
+  }
+
+  .location-info, .location-map, .sns-box {
+    width: 100%;     /* これで横幅いっぱいまで広がってくれた */
+  }
+
+  .sns-box {
+    margin-bottom: 30px;
+  }
+  /* ロケーションとSNSここまで */
 }
